@@ -5,20 +5,37 @@
       <p class="list__text">Smile! :)</p>
     </label>
     <p class="list__date">5/26</p>
-    <button class="list__delete">Delete</button>
+    <button class="list__delete">X</button>
+  </ul>
+  <ul class="list">
+    <input type="checkbox" id="list-item-1" />
+    <label for="list-item-1">
+      <p class="list__text">Smile! :)</p>
+    </label>
+    <p class="list__date">5/26</p>
+    <button class="list__delete">X</button>
+  </ul>
+  <ul class="list">
+    <input type="checkbox" id="list-item-1" />
+    <label for="list-item-1">
+      <p class="list__text">Smile! :)</p>
+    </label>
+    <p class="list__date">5/26</p>
+    <button class="list__delete">X</button>
   </ul>
 </template>
 
 <style scoped>
 .list {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
-  background-color: #f0f8ff;
+  background-color: white;
   padding: 10px;
-  border-radius: 8px;
-  margin: 20px 0;
+  border-radius: 3px;
+  margin: 10px 0;
   list-style: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .list__item {
@@ -26,7 +43,7 @@
   align-items: center;
   justify-content: space-between;
   background-color: white;
-  padding: 15px;
+  padding: 10px;
   border-radius: 8px;
   margin-bottom: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -45,7 +62,7 @@
 
 .list__text {
   flex-grow: 1;
-  margin: 0;
+  margin-left: 10px;
   font-size: 18px;
   font-weight: 600;
 }
@@ -62,13 +79,14 @@
 }
 
 .list__delete {
-  background-color: #ff5252;
-  color: white;
+  background-color: transparent;
+  color: grey;
   border: none;
   border-radius: 8px;
   padding: 8px 12px;
   cursor: pointer;
   font-size: 14px;
+  margin-left: 600px;
 }
 
 .list__delete:hover {

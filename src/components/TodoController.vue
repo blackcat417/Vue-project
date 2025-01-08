@@ -48,15 +48,16 @@
 
 .clear {
   padding: 10px 16px;
-  background-color: #ff5252;
+  background-color: transparent;
   border: none;
   border-radius: 8px;
-  color: white;
+  color: grey;
   font-size: 16px;
+  text-decoration: underline;
   cursor: pointer;
 }
 
 .clear:hover {
-  background-color: #ff7979;
+  cursor: pointer;
 }
 </style>

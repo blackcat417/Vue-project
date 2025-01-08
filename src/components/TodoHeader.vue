@@ -30,3 +30,14 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: transparent;
+  color: white;
+  font-weight: bold;
+}
+</style>

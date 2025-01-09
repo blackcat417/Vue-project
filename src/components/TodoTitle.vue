@@ -29,14 +29,13 @@ export default {
 
 <style>
 .title {
+  background-color: rgb(235, 235, 255);
   color: black;
   text-align: center;
-  margin-top: 40px;
   font-family: "Jost", sans-serif;
 }
 .title__message {
   font-size: 25px;
-  margin-bottom: 8px;
   font-weight: 300;
 }
 
@@ -51,7 +50,7 @@ export default {
 .title__task-total {
   font-size: 30px;
   font-weight: 700;
-  color: #f9d342; /* 강조 색상 */
+  color: rgb(107, 70, 255); /* 강조 색상 */
   margin-right: 8px;
 }
 </style>

@@ -117,7 +117,7 @@ export default {
 </script>
 
 <style>
-.app {
-  background-color: black;
+#app {
+  background-color: rgb(235, 235, 255);
 }
 </style>

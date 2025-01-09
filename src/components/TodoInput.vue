@@ -51,6 +51,7 @@ export default {
   align-items: center;
   margin: 10px 0;
   gap: 10px;
+  background-color: rgb(235, 235, 255);
 }
 
 .add__input {

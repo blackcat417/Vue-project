@@ -9,12 +9,17 @@
         <input
           type="checkbox"
           v-bind:id="todoItem.item"
-          v-bind:checked="todoItem.completed === true"
+          v-bind:checked="todoItem.completed"
           v-on:change="toggleComplete(todoItem)"
           class="list__checkbox"
         />
         <label v-bind:for="todoItem.item" class="list__label">
-          <p class="list__text">{{ todoItem.item }}</p>
+          <p
+            class="list__text"
+            v-bind:class="{ 'list__text--completed': todoItem.completed }"
+          >
+            {{ todoItem.item }}
+          </p>
         </label>
       </div>
       <div class="list__right">
@@ -87,6 +92,10 @@ export default {
   margin-left: 10px;
   font-size: 18px;
   font-weight: 600;
+}
+.list__text--completed {
+  text-decoration: line-through; /* 가운데 줄 */
+  color: lightgray; /* 완료된 항목 색상 변경 */
 }
 
 .list__right {

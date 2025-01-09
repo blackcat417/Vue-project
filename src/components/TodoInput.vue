@@ -7,7 +7,7 @@
       v-model="newTodoItem"
       v-on:keyup.enter="addTodoItem"
     />
-    <button class="add__button" v-on:click="addTodoItem">
+    <button class="add__button" @click="addTodoItem">
       <span class="blind">Add</span>
     </button>
   </div>
@@ -25,6 +25,8 @@ export default {
   methods: {
     addTodoItem() {
       if (this.newTodoItem !== "") {
+        this.$emit("addItem", this.newTodoItem);
+        this.clearInput();
         var value = {
           item: this.newTodoItem,
           date: `${getDate().date} ${getDate().week}`,

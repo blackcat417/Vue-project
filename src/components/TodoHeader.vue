@@ -29,6 +29,7 @@ export default {
   border-radius: 3px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 10px 20px;
   background-color: rgb(235, 235, 255);
   color: black;

@@ -1,51 +1,71 @@
 <template>
   <ul class="list">
-    <input type="checkbox" id="list-item-1" />
-    <label for="list-item-1">
-      <p class="list__text">Smile! :)</p>
-    </label>
-    <p class="list__date">5/26</p>
-    <button class="list__delete">X</button>
-  </ul>
-  <ul class="list">
-    <input type="checkbox" id="list-item-1" />
-    <label for="list-item-1">
-      <p class="list__text">Smile! :)</p>
-    </label>
-    <p class="list__date">5/26</p>
-    <button class="list__delete">X</button>
-  </ul>
-  <ul class="list">
-    <input type="checkbox" id="list-item-1" />
-    <label for="list-item-1">
-      <p class="list__text">Smile! :)</p>
-    </label>
-    <p class="list__date">5/26</p>
-    <button class="list__delete">X</button>
+    <li
+      class="list__item"
+      v-for="todoItem in todoItems"
+      v-bind:key="todoItem.item"
+    >
+      <input
+        type="checkbox"
+        v-bind:id="todoItem.item"
+        v-bind:checked="todoItem.completed === true"
+        v-on:change="toggleComplete(todoItem)"
+      />
+      <label v-bind:for="todoItem.item" class="list__label">
+        <p class="list__text">{{ todoItem.item }}</p>
+      </label>
+      <p class="list__date">{{ todoItem.date }}</p>
+    </li>
   </ul>
 </template>
 
+<script>
+export default {
+  data() {
+    return {
+      todoItems: [],
+    };
+  },
+  created() {
+    if (localStorage.length > 0) {
+      for (let i = 0; i < localStorage.length; i++) {
+        if (localStorage.key(i) !== "loglevel:webpack-dev-server") {
+          this.todoItems.push(
+            JSON.parse(localStorage.getItem(localStorage.key(i)))
+          );
+        }
+      }
+    }
+  },
+  methods: {
+    toggleComplete(todoItem) {
+      todoItem.completed = !todoItem.completed;
+      localStorage.setItem(todoItem.item, JSON.stringify(todoItem));
+    },
+  },
+};
+</script>
+
 <style scoped>
 .list {
-  display: flex;
-  justify-content: start;
+  display: grid;
+  justify-content: center;
   align-items: center;
-  background-color: white;
+  background-color: rgb(211, 225, 255);
   padding: 10px;
   border-radius: 3px;
-  margin: 10px 0;
   list-style: none;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .list__item {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: start;
   background-color: white;
   padding: 10px;
   border-radius: 8px;
   margin-bottom: 10px;
+
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -74,7 +94,7 @@
 
 .list__date {
   margin: 0 10px;
-  font-size: 14px;
+  font-size: 15px;
   color: gray;
 }
 
@@ -86,7 +106,6 @@
   padding: 8px 12px;
   cursor: pointer;
   font-size: 14px;
-  margin-left: 600px;
 }
 
 .list__delete:hover {

@@ -32,6 +32,6 @@ export default {
 
 <style>
 .app {
-  background-color: aqua;
+  background-color: black;
 }
 </style>

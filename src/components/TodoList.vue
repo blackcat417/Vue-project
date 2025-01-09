@@ -20,7 +20,7 @@
       <div class="list__right">
         <p class="list__date">{{ todoItem.date }}</p>
         <button class="list__delete" v-on:click="removeTodo(todoItem, index)">
-          <div class="blind">Delete</div>
+          <div class="blind">X</div>
         </button>
       </div>
     </li>
@@ -102,12 +102,13 @@ export default {
 
 .list__delete {
   background-color: transparent;
-  color: grey;
+  color: rgb(255, 0, 0);
+  font-weight: bold;
   border: none;
   border-radius: 8px;
   padding: 8px 12px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .list__delete:hover {

@@ -3,7 +3,7 @@
     <TodoHeader />
     <TodoTitle />
     <TodoInput v-on:addItem="addOneItem" />
-    <TodoController />
+    <TodoController v-on:clearAll="clearAllItems" />
     <TodoList
       v-bind:propsdata="todoItems"
       v-on:removeItem="removeOneItem"
@@ -50,6 +50,10 @@ export default {
       };
       localStorage.setItem(todoItem, JSON.stringify(value));
       this.todoItems.push(value);
+    },
+    clearAllItems() {
+      this.todoItems = [];
+      localStorage.clear();
     },
   },
   created() {

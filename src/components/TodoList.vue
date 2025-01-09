@@ -52,21 +52,22 @@ export default {
   display: grid;
   justify-content: center;
   align-items: center;
-  background-color: #e6e6e6;
+  background-color: #eaeaea;
   padding: 10px;
   list-style: none;
-  margin-block-end: -5px;
+  margin-block-end: 0px;
   margin-block-start: 0px;
 }
 
 .list__item {
   width: 400px;
+  height: 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: white;
   padding: 10px;
-  border-radius: 8px;
+  border-radius: 5px;
   margin-bottom: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }

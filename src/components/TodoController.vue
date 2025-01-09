@@ -36,7 +36,7 @@ export default {
 
 <style scoped>
 .controller {
-  background-color: #e6e6e6;
+  background-color: #eaeaea;
   display: flex;
   justify-content: space-between;
   align-items: center;

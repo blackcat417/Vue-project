@@ -36,10 +36,11 @@ export default {
 
 <style scoped>
 .controller {
+  background-color: #e6e6e6;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 20px 10px;
+  padding-top: 10px;
 }
 
 .select {
@@ -49,16 +50,15 @@ export default {
 }
 
 .select-label {
-  font-size: 14px;
+  font-size: 12px;
   margin-bottom: 4px;
 }
 
 .selectbox {
-  margin-top: 5px;
   padding: 8px 12px;
-  font-size: 16px;
+  margin-left: 10px;
+  font-size: 14px;
   border: 1px solid #ddd;
-  border-radius: 8px;
   background-color: white;
   appearance: none;
   outline: none;

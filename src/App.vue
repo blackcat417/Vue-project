@@ -1,8 +1,10 @@
 <template>
   <div id="app">
-    <TodoHeader />
-    <TodoTitle v-bind:propsdata="checkCount" />
-    <TodoInput v-on:addItem="addOneItem" />
+    <div class="main-container">
+      <TodoHeader />
+      <TodoTitle v-bind:propsdata="checkCount" />
+      <TodoInput v-on:addItem="addOneItem" />
+    </div>
     <TodoController v-on:clearAll="clearAllItems" />
     <TodoList
       v-bind:propsdata="todoItems"
@@ -117,7 +119,15 @@ export default {
 </script>
 
 <style>
+.main-container {
+  background: linear-gradient(
+    135deg,
+    #4facfe,
+    #f093fb
+  ); /* 파란색에서 핑크색으로 그라데이션 */
+  padding: 20px 0;
+}
 #app {
-  background-color: rgb(235, 235, 255);
+  background: linear-gradient(135deg, #4facfe, #f093fb);
 }
 </style>

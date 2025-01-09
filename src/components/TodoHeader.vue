@@ -22,17 +22,16 @@ export default {
 
 <style scoped>
 .logo {
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 500;
 }
 .header {
-  border-radius: 3px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: rgb(235, 235, 255);
-  color: black;
-  font-weight: 400;
+  background-color: transparent;
+  color: white;
+  font-weight: 500;
 }
 </style>

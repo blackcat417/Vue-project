@@ -10,7 +10,6 @@
         >
       </span>
       <span class="title__task-bottom">tasks today!</span>
-      <span class="title__task-info"></span>
     </p>
   </div>
 </template>
@@ -29,9 +28,10 @@ export default {
 
 <style>
 .title {
-  background-color: rgb(235, 235, 255);
-  color: black;
-  text-align: center;
+  margin-left: 30px;
+  background: transparent;
+  color: white;
+  text-align: left;
   font-family: "Jost", sans-serif;
 }
 .title__message {
@@ -42,14 +42,17 @@ export default {
 .title__task {
   font-size: 24px;
   font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 .title__task-left {
   font-size: 50px;
-  font-weight: 500;
+  font-weight: 900;
 }
 .title__task-total {
   font-size: 30px;
-  font-weight: 700;
+  font-weight: 900;
   color: rgb(107, 70, 255); /* 강조 색상 */
   margin-right: 8px;
 }

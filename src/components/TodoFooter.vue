@@ -9,7 +9,7 @@
   font-size: 16px;
   font-weight: 300;
   color: white;
-  background-color: rgb(164, 164, 164);
+  background: linear-gradient(135deg, #4facfe, #f093fb);
 }
 </style>
 ㄴ

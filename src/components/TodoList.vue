@@ -52,10 +52,11 @@ export default {
   display: grid;
   justify-content: center;
   align-items: center;
-  background-color: #f0f8ff;
+  background-color: #e6e6e6;
   padding: 10px;
-  border-radius: 3px;
   list-style: none;
+  margin-block-end: -5px;
+  margin-block-start: 0px;
 }
 
 .list__item {

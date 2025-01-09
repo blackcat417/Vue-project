@@ -51,17 +51,28 @@ export default {
   align-items: center;
   margin: 10px 0;
   gap: 10px;
-  background-color: rgb(235, 235, 255);
+  background: transparent;
 }
 
 .add__input {
   width: 70%;
   padding: 15px;
-  border: 1px solid #ddd;
+  border: none;
   border-radius: 25px;
   font-size: 16px;
   outline: none;
   transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(88, 88, 88, 0.805);
+  background-color: rgba(255, 255, 255, 0.441);
+}
+.add__input::placeholder {
+  color: rgba(
+    255,
+    255,
+    255,
+    0.829
+  ); /* placeholder 텍스트 색상을 하얀색으로 설정 */
+  opacity: 1; /* 기본값은 0.5로 설정되기 때문에, 1로 변경하여 불투명하게 */
 }
 
 .add__input:focus {
@@ -72,12 +83,14 @@ export default {
 .add__button {
   padding: 15px 20px;
   background-color: #9f9f9f;
-  color: white;
+  color: grey;
   font-size: 16px;
   border: none;
   border-radius: 25px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+
+  background-color: rgba(255, 255, 255, 0.692);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .add__button:hover {

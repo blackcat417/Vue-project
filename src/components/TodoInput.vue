@@ -94,6 +94,7 @@ export default {
 }
 
 .add__button:hover {
-  background-color: #45a049;
+  background-color: #36a1ff7d;
+  color: white;
 }
 </style>
